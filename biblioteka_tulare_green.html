@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Biblioteka OŠ Vladimir Bukilić – Tulare</title>
+<style>
+  :root{
+    --main:#6fbf73;
+    --dark:#4a8f52;
+    --bg:#f4faf5;
+    --card:#ffffff;
+    --text:#222;
+  }
+  body{font-family:"Segoe UI",sans-serif;background:var(--bg);margin:0;padding:16px;color:var(--text);}
+  h1{text-align:center;color:var(--dark);}
+  form{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,0.08);max-width:500px;margin:20px auto;}
+  label{display:block;margin-top:10px;font-weight:600;}
+  input,select,button{width:100%;padding:10px;margin-top:4px;border:1px solid #ccc;border-radius:8px;font-size:15px;}
+  button{background:var(--main);border:none;color:#fff;font-weight:700;cursor:pointer;margin-top:12px;}
+  button:hover{background:var(--dark);}
+  img{max-width:100%;border-radius:8px;margin-top:10px;border:1px solid #ccc;}
+</style>
+</head>
+<body>
+<h1>📚 Biblioteka OŠ Vladimir Bukilić – Tulare</h1>
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSd9K1CwPWwwJGPz2hg1YoE85Fr2AOgA1rJTQx3tB0ItEQKtZw/formResponse" method="POST" target="_self" enctype="multipart/form-data">
+  <label>Slikaj korice knjige 📸</label>
+  <input type="file" accept="image/*" capture="environment" name="entry.1841018813" />
+
+  <label>Inventarni broj</label>
+  <input type="text" name="entry.1883613575" required>
+
+  <label>Naslov</label>
+  <input type="text" name="entry.1981218579" required>
+
+  <label>Autor</label>
+  <input type="text" name="entry.1628349998">
+
+  <label>Izdavač</label>
+  <input type="text" name="entry.1281581715">
+
+  <label>Godina izdanja</label>
+  <input type="text" name="entry.397841534">
+
+  <label>Signatura</label>
+  <input type="text" name="entry.2086119030">
+
+  <label>Stanje</label>
+  <select name="entry.542398520">
+    <option value="Novo">Novo</option>
+    <option value="Dobro">Dobro</option>
+    <option value="Oštećeno">Oštećeno</option>
+  </select>
+
+  <label>Školska godina</label>
+  <input type="text" name="entry.713175852">
+
+  <label>Vrednost</label>
+  <input type="text" name="entry.1257892273">
+
+  <button type="submit">📤 Pošalji</button>
+</form>
+</body>
+</html>
