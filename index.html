@@ -126,7 +126,39 @@ const ENTRY = {
   vrednost: "entry.1257892273",
   napomena: "entry.1487519183"
 };
-const OCR_API_KEY = "helloworld"; // demo ključ (ograničen)
+/* ---------------- OCR funkcija (Google Cloud Vision) ---------------- */
+async function runOcr(file) {
+  statusEl.textContent = "⏳ Šaljem sliku na Google OCR (može potrajati)...";
+  const reader = new FileReader();
+
+  return new Promise((resolve) => {
+    reader.onload = async () => {
+      const base64 = reader.result.split(',')[1];
+
+      try {
+        const res = await fetch(`https://vision.googleapis.com/v1/images:annotate?key=AIzaSyB3s6Bh2kNE9FHDSw_GR5BDCUL0wVQimlA`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            requests: [{
+              image: { content: base64 },
+              features: [{ type: "TEXT_DETECTION" }]
+            }]
+          })
+        });
+
+        const data = await res.json();
+        const text = data?.responses?.[0]?.fullTextAnnotation?.text || "";
+        resolve(text);
+      } catch (e) {
+        console.error("Greška OCR:", e);
+        statusEl.textContent = "⚠️ Greška u vezi sa OCR servisom.";
+        resolve("");
+      }
+    };
+    reader.readAsDataURL(file);
+  });
+}
 </script>
 </body>
 </html>
