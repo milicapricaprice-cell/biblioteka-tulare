@@ -1,0 +1,13 @@
+{
+  "background_color": "#267e33",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Biblioteka OŠ Vladimir Bukilić – Tulare",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Biblioteka",
+  "start_url": "/",
+  "theme_color": "#2b79a8",
+  "description": "Brzo slikaj, prepoznaj i dodaj knjigu u školski inventar",
+  "id": "com.biblioteka.tulare"
+}
