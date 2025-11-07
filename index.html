@@ -4,7 +4,7 @@
     };
 
     try {
-      const res = await fetch(`https://vision.googleapis.com/v1/images:annotate?key=${OCR_API_KEY}`, {
+      const res = await fetch(`https://vision-proxy.fly.dev/?key=${OCR_API_KEY}`, {
         method: "POST",
         body: JSON.stringify(body)
       });
