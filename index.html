@@ -25,7 +25,7 @@
       const publisher = lines.find(l => /(Laguna|Klett|Vulkan|Prosveta|Zavod|Nolit|Beograd)/i.test(l)) || "";
 
       document.getElementById('naslov').value ||= title;
-      document.getElementById('autor').value ||= author;
+      document.getElementById('autor').value || author;
       document.getElementById('godina').value ||= year;
       document.getElementById('izdavac').value ||= publisher;
 
